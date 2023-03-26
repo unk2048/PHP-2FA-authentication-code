@@ -1,0 +1,9 @@
+<?php
+$random_number = random_int(0, 99999999);99
+$random_number_str = strval($random_number);
+
+while (strlen($random_number_str) < 8) {$random_number_str .= strval(random_int(0, 9));}
+
+$random_number = substr($random_number_str, 0, 8);
+echo "<script>console.log('$random_number');</script>";
+?>
